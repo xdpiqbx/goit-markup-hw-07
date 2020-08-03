@@ -465,54 +465,48 @@ header{
 
 /*in section clients ===================== index.html ================================================*/
 .clients{
-    text-align: center;
-}
-
-.clients-list li:not(:last-child){
-    margin-right: 30px;
-}
-
-    .clients .section-title{
+    &-list li:not(:last-child){ margin-right: 30px; }
+    .section-title{
+        text-align: center;
         margin-bottom: 50px;
     }
+}
 
-    .clients-list{
-        justify-content: center;
-    }
-
-    .clients-list li{
+.clients-list{
+    li{
         width: 170px;
         height: 90px;
         border: 1px solid var(--swg-icons-main-color);
         border-radius: 4px;
-    }
-        .clients-list li svg{
-            fill: var(--swg-icons-main-color);
+        
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            
+            svg{
+                fill: var(--swg-icons-main-color);
+                transition-duration: var(--transition-duration-time); 
+                transition-timing-function: var(--cubic-hover);
+            }
+
+            &:hover svg,
+            &:focus svg{
+                fill: var(--main-hover-color);
+            }
+        }
+        
+        &:hover,
+        &:focus{
+            border: 1px solid var(--main-hover-color);
             transition-duration: var(--transition-duration-time); 
             transition-timing-function: var(--cubic-hover);
         }
-
-        .clients-list li a:hover svg,
-        .clients-list li a:focus svg{
-            fill: var(--main-hover-color);
-        }
-
-    .clients-list li:hover,
-    .clients-list li:focus{
-        border: 1px solid var(--main-hover-color);
-        transition-duration: var(--transition-duration-time); 
-        transition-timing-function: var(--cubic-hover);
     }
-
-    .clients-list a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-    }
-
+}
 
 /*in section portfolio ===================== portfolio.html ================================================*/
     .btn-group{

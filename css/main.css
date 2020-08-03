@@ -534,22 +534,13 @@ header li, header a {
 }
 
 /*in section clients ===================== index.html ================================================*/
-.clients {
-  text-align: center;
-}
-
 .clients-list li:not(:last-child) {
   margin-right: 30px;
 }
 
 .clients .section-title {
+  text-align: center;
   margin-bottom: 50px;
-}
-
-.clients-list {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .clients-list li {
@@ -559,29 +550,7 @@ header li, header a {
   border-radius: 4px;
 }
 
-.clients-list li svg {
-  fill: var(--swg-icons-main-color);
-  -webkit-transition-duration: var(--transition-duration-time);
-          transition-duration: var(--transition-duration-time);
-  -webkit-transition-timing-function: var(--cubic-hover);
-          transition-timing-function: var(--cubic-hover);
-}
-
-.clients-list li a:hover svg,
-.clients-list li a:focus svg {
-  fill: var(--main-hover-color);
-}
-
-.clients-list li:hover,
-.clients-list li:focus {
-  border: 1px solid var(--main-hover-color);
-  -webkit-transition-duration: var(--transition-duration-time);
-          transition-duration: var(--transition-duration-time);
-  -webkit-transition-timing-function: var(--cubic-hover);
-          transition-timing-function: var(--cubic-hover);
-}
-
-.clients-list a {
+.clients-list li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -595,6 +564,27 @@ header li, header a {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.clients-list li a svg {
+  fill: var(--swg-icons-main-color);
+  -webkit-transition-duration: var(--transition-duration-time);
+          transition-duration: var(--transition-duration-time);
+  -webkit-transition-timing-function: var(--cubic-hover);
+          transition-timing-function: var(--cubic-hover);
+}
+
+.clients-list li a:hover svg,
+.clients-list li a:focus svg {
+  fill: var(--main-hover-color);
+}
+
+.clients-list li:hover, .clients-list li:focus {
+  border: 1px solid var(--main-hover-color);
+  -webkit-transition-duration: var(--transition-duration-time);
+          transition-duration: var(--transition-duration-time);
+  -webkit-transition-timing-function: var(--cubic-hover);
+          transition-timing-function: var(--cubic-hover);
 }
 
 /*in section portfolio ===================== portfolio.html ================================================*/
