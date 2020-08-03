@@ -327,12 +327,14 @@ header{
             3: "../images/benefits-svg/diagram.svg",
             4: "../images/benefits-svg/astronaut.svg"
         );
-        
+
         @each $key, $val in $images{
-            li:nth-child(#{$key}) h3::before{ background-image: url("#{$val}");
+            li:nth-child(#{$key}) h3::before{ background-image: url("#{$val}"); }    
         }
 
-        p{
+    }
+
+        .benefits-list p{
             font-family: var(--main-font-family);
             font-style: normal;
             font-weight: 400;
@@ -340,8 +342,6 @@ header{
             line-height: 1.7em;
             color: var(--secondary-font-color);
         }
-    }
-
 
 
 
@@ -357,34 +357,39 @@ header{
 
 .what-we-do-list{
     justify-content: center;
-
-    li{ position: relative; }
-    
-    li:not(:last-child){
-        margin-right: 30px;
-    }
-    
-    a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        bottom: 0;
-        color: var(--main-font-on-dark-fon-color);
-        width: 100%;
-        height: 70px;
-        background-color: var(--what-we-do-card-header-bg-color);
-        
-        h3{
-            margin: 0;
-            font-family: var(--main-font-family);
-            font-weight: 600;
-            font-size: 14px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-    }
 }
+
+.what-we-do-list li:not(:last-child){
+    margin-right: 30px;
+}
+
+.what-we-do-list li{
+    position: relative;
+}
+
+.what-we-do a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    color: var(--main-font-on-dark-fon-color);
+    width: 100%;
+    height: 70px;
+    background-color: var(--what-we-do-card-header-bg-color);
+}
+
+    .what-we-do h3{
+        margin: 0;
+        font-family: var(--main-font-family);
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+
+
 /*in section our-team ===================== index.html ================================================*/
 .secondary-bg-color{
     background-color: var(--secondary-bg-color);
