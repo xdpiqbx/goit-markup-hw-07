@@ -396,23 +396,23 @@ header li, header a {
   padding-top: 0;
 }
 
-.section-title {
+.what-we-do .section-title {
   margin-bottom: 50px;
   text-align: center;
 }
 
-.what-we-do-list {
+.what-we-do .what-we-do-list {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.what-we-do-list li:not(:last-child) {
-  margin-right: 30px;
+.what-we-do li {
+  position: relative;
 }
 
-.what-we-do-list li {
-  position: relative;
+.what-we-do li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .what-we-do a {
@@ -433,7 +433,7 @@ header li, header a {
   background-color: var(--what-we-do-card-header-bg-color);
 }
 
-.what-we-do h3 {
+.what-we-do a h3 {
   margin: 0;
   font-family: var(--main-font-family);
   font-weight: 600;
@@ -478,8 +478,13 @@ header li, header a {
   border-radius: 0px 0px 4px 4px;
 }
 
-.our-team-member:last-child {
-  margin-right: 0;
+.our-team-member img {
+  margin-bottom: 30px;
+}
+
+.our-team-member h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .our-team-member b {
@@ -493,16 +498,11 @@ header li, header a {
   color: var(--secondary-font-color);
 }
 
-.our-team-member img {
-  margin-bottom: 30px;
+.our-team-member:last-child {
+  margin-right: 0;
 }
 
-.our-team-member h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.our-team-member .social {
+.social {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -510,12 +510,9 @@ header li, header a {
 
 .social li:not(:last-child) {
   margin-right: 10px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.social li a {
+.social a {
   display: block;
 }
 
@@ -534,15 +531,6 @@ header li, header a {
 .social a:focus .link-icon {
   fill: var(--main-font-on-dark-fon-color);
   background-color: var(--main-hover-color);
-}
-
-footer .social .link-icon {
-  fill: var(--main-font-on-dark-fon-color);
-  background-color: var(--social-links);
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*in section clients ===================== index.html ================================================*/
@@ -760,6 +748,11 @@ footer {
   background-color: var(--footer-bg-color);
 }
 
+footer .social .link-icon {
+  fill: var(--main-font-on-dark-fon-color);
+  background-color: var(--social-links);
+}
+
 footer div.section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -795,12 +788,6 @@ footer div {
 .join {
   width: 206px;
   margin-right: 94px;
-}
-
-.join .social {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 footer .logo {
