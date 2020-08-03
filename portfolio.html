@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
@@ -254,7 +253,12 @@
                 <form action="#" method="post" class="footer-subscribe flex-container">
                     <input type="email" id="subscribe-email" name="footer-email" placeholder=" " class="footer-input" />
                     <label for="subscribe-email" class="footer-subscribe-label">E-mail</label>
-                    <button type="submit" class="footer-subscribe-button flex-container">Подписатья</button>
+                    <button type="submit" class="footer-subscribe-button flex-container">
+                        <span>Подписатья</span>
+                        <svg width="24" height="24">
+                            <use href="./images/sprite-modal.svg#icon-send"></use>
+                        </svg>
+                    </button>
                 </form>
             </div>
         </div>

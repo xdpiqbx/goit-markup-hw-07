@@ -66,19 +66,12 @@ html {
     box-sizing: inherit;
 }
 
-*:hover,
-*:focus{
-    transition-duration: var(--transition-duration-time); 
-    transition-timing-function: var(--cubic-hover);
-}
-
 /* body ===================================================================== */
 body{
     font-family: var(--main-font-family);
     color: var(--main-font-color);
     background-color: var(--main-bg-color);
     letter-spacing: 0.03em;
-    min-width: var(--max-width);
 }
 
 
@@ -127,6 +120,7 @@ img {
 header{
     color: var(--main-font-color);
     border: 1px solid var(--header-border-color);
+    min-height: 80px;
 }
 
 header div.flex-container{
@@ -182,6 +176,8 @@ header div.section{
             .addres-header a{
                 color: var(--secondary-font-color);
                 fill: var(--secondary-font-color);
+                transition-duration: var(--transition-duration-time);
+                transition-timing-function: var(--cubic-hover);
             }
 
             .contact li:not(:last-child){
@@ -189,11 +185,11 @@ header div.section{
             }
 
             .contact a{
-                min-height: 80px;
+                display: flex;
             }
             
             .address-icon{
-                display: inline-block;
+                display: flex;
                 width: 16px;
                 height: 16px;
             }
@@ -231,6 +227,8 @@ header div.section{
         background-color: var(--main-hover-color);
         border-radius: 3px;
         opacity: 0;
+        transition-duration: var(--transition-duration-time);
+        transition-timing-function: var(--cubic-hover);
     }
 
     .active-page::after{
@@ -240,8 +238,6 @@ header div.section{
     .menu-hover-underline:hover::after,
     .menu-hover-underline:focus::after{
         opacity: 1;
-        transition-duration: var(--transition-duration-time);
-        transition-timing-function: var(--cubic-hover);
     }
 
 
@@ -260,14 +256,6 @@ header div.section{
                 url("../images/hero-image.jpg");
     background-position: center;
 }
-
-    /*
-    или так =)) но у hero убрать display: flex; justify и align
-     .wrapper-for-hero-content{
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    } */
 
     .hero h1{
         margin-top:0;
@@ -295,7 +283,15 @@ header div.section{
         box-shadow: var(--hero-button-shadow);
         border: 0;
         border-radius: 4px;
+        transition-duration: var(--transition-duration-time); 
+        transition-timing-function: var(--cubic-hover);
     }
+
+        .hero button:hover,
+        .hero button:focus{
+            background-color: var(--main-bg-color);
+            color: var(--main-font-color);
+        }
 
 .wrapper-full-width{
     background-color: var(--secondary-bg-color);
@@ -354,12 +350,6 @@ header div.section{
         .diagram::before{ background-image: url("../images/benefits-svg/diagram.svg"); }
         .astronaut::before{ background-image: url("../images/benefits-svg/astronaut.svg"); }
 
-/*     .placeholder-for-icon{
-        height: 120px;
-        margin-bottom: 30px;
-        background-color: var(--secondary-bg-color);
-        border-radius: 4px;
-    } */
         .benefits-icon{
             width: 70px;
             height: 70px;
@@ -487,17 +477,21 @@ header div.section{
             width: 44px;
             height: 44px;
             fill: var(--swg-icons-main-color);
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
             .social a:hover .link-icon,
             .social a:focus .link-icon{
-                background-color: var(--main-hover-color);
                 fill:var(--main-font-on-dark-fon-color);
+                background-color: var(--main-hover-color);
             }
 
             footer .social .link-icon{
-                background-color:var(--social-links);
                 fill: var(--main-font-on-dark-fon-color);
+                background-color:var(--social-links);
+                transition-duration: 250ms; 
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             }
 
 
@@ -527,18 +521,20 @@ header div.section{
     }
         .clients-list li svg{
             fill: var(--swg-icons-main-color);
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
         .clients-list li a:hover svg,
         .clients-list li a:focus svg{
             fill: var(--main-hover-color);
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
         }
 
     .clients-list li:hover,
     .clients-list li:focus{
         border: 1px solid var(--main-hover-color);
+        transition-duration: var(--transition-duration-time); 
+        transition-timing-function: var(--cubic-hover);
     }
 
     .clients-list a{
@@ -574,6 +570,8 @@ header div.section{
             box-shadow: var(--portfolio-button-shadow);
             border-radius: 4px;
             outline: none;
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
         .btn-group button:hover,
@@ -595,6 +593,8 @@ header div.section{
             margin-bottom: 30px;
             padding-bottom: 20px;
             overflow: hidden;
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
         
         .portfolio-item a{
@@ -605,7 +605,6 @@ header div.section{
                 overflow: hidden;
                 margin-bottom: 20px;
             }
-
 
         .hover-text{
             position: absolute;
@@ -769,11 +768,18 @@ footer div.section{
                     left: 16px;
                     top: 50%;
                     transform: translateY(-50%);
+                    transition-duration: var(--transition-duration-time);
+                    transition-timing-function: var(--cubic-hover);
                 }
 
     #subscribe-email:focus + .footer-subscribe-label,
     #subscribe-email:not(:placeholder-shown) + .footer-subscribe-label{
         opacity: 0;
+    }
+    
+    .footer-subscribe .flex-container{
+        justify-content: center;
+        align-items: center;
     }
 
     .footer-subscribe-label{
@@ -781,27 +787,33 @@ footer div.section{
     }
 
     .footer-subscribe-button{
+        display: flex;
         width: 200px;
         margin-left: 12px;
         color: var(--main-font-on-dark-fon-color);
+        fill: #ffffff;
         background-color: var(--main-hover-color);
         border: none;
         font-size: 16px;
         letter-spacing: 0.06em;
         font-weight: 600;
+        transition-duration: var(--transition-duration-time); 
+        transition-timing-function: var(--cubic-hover);
     }
-        .footer-subscribe-button::after{
-            content: "";
+          
+        .footer-subscribe-button svg{
             margin-left: 10px;
-            width: 24px;
-            height: 24px;
-            background-image: url(../images/icon-send.svg);
         }
-
-    .footer-subscribe .flex-container{
-        justify-content: center;
-        align-items: center;
+       
+    .footer-subscribe-button:hover,
+    .footer-subscribe-button:focus{
+        fill: var(--main-hover-color);
+        color: var(--main-hover-color);
+        background-color: var(--main-bg-color);
     }
+
+        
+
 /*===================== modal ================================================*/
 .backdrop{
     position: fixed;
@@ -857,6 +869,8 @@ footer div.section{
             border-radius: 50%;
             background-color: var(--modal-window-bg-color);
             cursor: pointer;
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
 
             .close-modal:hover,
@@ -915,7 +929,10 @@ footer div.section{
             display: block;
             height: 0.05em;
             background-color: var(--main-hover-color);
+            transition-duration: var(--transition-duration-time); 
+            transition-timing-function: var(--cubic-hover);
         }
+
         .form-field .link-terms:hover::after{
             opacity: 0;
         }
@@ -939,6 +956,7 @@ footer div.section{
             position: absolute;
             top: 13px;
             left: 42px;
+            transition-duration: var(--transition-duration-time);
         }
 
         
@@ -946,7 +964,6 @@ footer div.section{
         .modal-input:not(:placeholder-shown) + .modal-label{
             top:-18px;
             left:16px;
-            transition-duration: var(--transition-duration-time);
             color: var(--main-hover-color);
         }
 
