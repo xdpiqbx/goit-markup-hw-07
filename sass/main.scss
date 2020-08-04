@@ -1,80 +1,86 @@
-:root{
-    --main-font-family: 'Roboto', sans-serif;
-    --logo-font-family: 'Raleway', sans-serif;
+
+    $_glb_main-font-family: 'Roboto', sans-serif;
+    $_glb_logo-font-family: 'Raleway', sans-serif;
     
-    --main-font-color: #212121;
-    --main-font-on-dark-fon-color: #ffffff;
-    --secondary-font-color: #757575;
-    --address-footer-a-color: rgba(255, 255, 255, 0.6);
+    $_glb_main-font-color: #212121;
+    $_glb_main-font-on-dark-fon-color: #ffffff;
+    $_glb_secondary-font-color: #757575;
+    $_glb_address-footer-a-color: rgba(255, 255, 255, 0.6);
 
-    --secondary-bg-color: #F5F4FA;
-    --main-bg-color: #ffffff;
-    --member-card-bg-color: #ffffff;
-    --what-we-do-card-header-bg-color: rgba(70, 73, 109, 0.8);
-    --portfolio-card-hover-bg: rgba(33, 150, 243, 0.9);
-    --footer-bg-color: #2F303A;
-    --backdrop-bg-color: rgba(0, 0, 0, 0.2);
-    --social-links :rgba(255, 255, 255, 0.1);
-    --modal-window-bg-color: #ffffff;
+    $_glb_secondary-bg-color: #F5F4FA;
+    $_glb_main-bg-color: #ffffff;
+    $_glb_member-card-bg-color: #ffffff;
+    $_glb_what-we-do-card-header-bg-color: rgba(70, 73, 109, 0.8);
+    $_glb_portfolio-card-hover-bg: rgba(33, 150, 243, 0.9);
+    $_glb_footer-bg-color: #2F303A;
+    $_glb_backdrop-bg-color: rgba(0, 0, 0, 0.2);
+    $_glb_social-links :rgba(255, 255, 255, 0.1);
+    $_glb_modal-window-bg-color: #ffffff;
 
-    --header-border-color: #ECECEC;
-    --clients-border-color: #AFB1B8;
-    --portfolio-card-border-color: #EEEEEE;
+    $_glb_header-border-color: #ECECEC;
+    $_glb_clients-border-color: #AFB1B8;
+    $_glb_portfolio-card-border-color: #EEEEEE;
+    $_glb_footer-subscribe-input-border-color: rgba(255, 255, 255, 0.3);
+    $_glb_close-modal-border-color: rgba(0, 0, 0, 0.1);
+   
+    $_glb_footer-subscribe-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
-    --swg-icons-main-color: #AFB1B8;
+    $_glb_swg-icons-main-color: #AFB1B8;
 
-    --portfolio-button-shadow:
+    $_glb_portfolio-button-shadow:
         0px 2px 2px rgba(0, 0, 0, 0.12),
         0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 3px 1px rgba(0, 0, 0, 0.1);
 
-    --our-team-member-shadow:
+    $_glb_our-team-member-shadow:
         0px 2px 1px rgba(0, 0, 0, 0.2),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12);
 
-    --portfolio-card-shadow:
+    $_glb_portfolio-card-shadow:
         1px 4px 6px rgba(0, 0, 0, 0.16),
         0px 4px 4px rgba(0, 0, 0, 0.06),
         0px 1px 1px rgba(0, 0, 0, 0.12);
 
-    --hero-button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    $_glb_button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     
-    --modal-window-shadow:
+    $_glb_modal-window-shadow:
         0px 2px 1px rgba(0, 0, 0, 0.2),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12);
 
-    --hero-gradient-1: rgba(47, 48, 58, 0.8);
-    --hero-gradient-2: rgba(47, 48, 58, 0.8);
+    $_glb_hero-gradient-1: rgba(47, 48, 58, 0.8);
+    $_glb_hero-gradient-2: rgba(47, 48, 58, 0.8);
     
-    --main-hover-color: #2196F3;
+    $_glb_main-hover-color: #2196F3;
 
-    --max-width: 1200px;
+    $_glb_max-width: 1200px;
 
-    --transition-duration-time: 250ms;
-    --cubic-hover: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    $_glb_transition-duration-time: 250ms;
+    $_glb_cubic-hover: cubic-bezier(0.4, 0, 0.2, 1);
 
-html {
-    box-sizing: border-box;
-}
-  
+    /* -=-=-=-=-=-=-=-=- data -=-=-=-=-=-=-=-=- */
+    $images-map-for-benefits: (
+        1: "../images/benefits-svg/antenna.svg",
+        2: "../images/benefits-svg/clock.svg",
+        3: "../images/benefits-svg/diagram.svg",
+        4: "../images/benefits-svg/astronaut.svg"
+    );
+
+html { box-sizing: border-box; }
+
 *,
 *::before,
 *::after {
     box-sizing: inherit;
 }
-
-/* body ===================================================================== */
+  
 body{
-    font-family: var(--main-font-family);
-    color: var(--main-font-color);
-    background-color: var(--main-bg-color);
+    font-family: $_glb_main-font-family;
+    color: $_glb_main-font-color;
+    background-color: $_glb_main-bg-color;
     letter-spacing: 0.03em;
 }
-
-
 
 /* some reset ===================================================================== */
 a{ text-decoration: none; }
@@ -87,9 +93,7 @@ ul{
     margin: 0;
 }
 
-p, h2{
-    margin: 0;
-}
+p, h2{ margin: 0; }
 
 img {
     display: block;
@@ -105,23 +109,58 @@ img {
 
 .container{
     margin: 0 auto;
-    max-width: var(--max-width);
+    max-width: $_glb_max-width;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-.index-no-border{
-    border: 0;
-}
+.index-no-border{ border: 0; }
 
-/* =================================================================== Placeholder == */
+/* ================================= Placeholders ================================= */
 %flex-center{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+%social-links{
+/* -=-=-=-=-=-=-=-=- round social links -=-=-=-=-=-=-=-=- */
+    justify-content: center;
+    li:not(:last-child){
+        margin-right: 10px;
+    }
+    a{ display: block; }
+    
+    .link-icon{
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        fill: $_glb_swg-icons-main-color;
+        transition-duration: $_glb_transition-duration-time; 
+        transition-timing-function: $_glb_cubic-hover;
+    }
+    
+    & a:hover .link-icon,
+    & a:focus .link-icon{
+        fill:$_glb_main-font-on-dark-fon-color;
+        background-color: $_glb_main-hover-color;
+    }
+}
+
+%modal-input-textarea{
+/* -=-=-=-=-=-=-=-=- in modal window for all inputs and textarea -=-=-=-=-=-=-=-=- */
+    width: 448px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    &:focus{
+        outline: none;
+        border: 1px solid $_glb_main-hover-color;
+     }
+}
+
 %button-base{
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=- Big blue button -=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -131,26 +170,50 @@ img {
     height: 50px;
     border: none;
     border-radius: 4px;
-    background-color: var(--main-hover-color);
-    color: var(--main-font-on-dark-fon-color);
+    background-color: $_glb_main-hover-color;
+    color: $_glb_main-font-on-dark-fon-color;
+    box-shadow: $_glb_button-shadow;
+    cursor: pointer;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.9em;
     letter-spacing: 0.06em;
-    transition-duration: var(--transition-duration-time); 
-    transition-timing-function: var(--cubic-hover);
+    transition-duration: $_glb_transition-duration-time; 
+    transition-timing-function: $_glb_cubic-hover;
     &:hover,
     &:focus{
-        fill: var(--main-font-color);
-        color: var(--main-font-color);
-        background-color: var(--main-bg-color);
+        fill: $_glb_main-font-color;
+        color: $_glb_main-font-color;
+        background-color: $_glb_main-bg-color;
+    }
+}
+
+/*-=-=-=-=-=-=-=-=- Mixin -=-=-=-=-=-=-=-=-*/
+@mixin menu-underline ($opacity){
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    background-color: $_glb_main-hover-color;
+    border-radius: 3px;
+    opacity: $opacity;
+    transition-duration: $_glb_transition-duration-time;
+    transition-timing-function: $_glb_cubic-hover;
+}
+
+@mixin benefits-images($images-map){
+    @each $key, $val in $images-map{
+        li:nth-child(#{$key})
+        h3::before{ background-image: url("#{$val}"); }
     }
 }
 
 /* Header ===================================================================== */
 header{
-    color: var(--main-font-color);
-    border: 1px solid var(--header-border-color);
+    color: $_glb_main-font-color;
+    border: 1px solid $_glb_header-border-color;
     min-height: 80px;
     font-size: 14px;
     
@@ -158,7 +221,7 @@ header{
         display: flex;
         align-items: center;
         font-weight: 700;
-        color: var(--main-font-color);
+        color: $_glb_main-font-color;
     }
 }
 
@@ -172,12 +235,12 @@ header{
 
     .logo{
         margin-right: 85px;
-        font-family: var(--logo-font-family);
+        font-family: $_glb_logo-font-family;
         font-size: 26px;
-        color: var(--main-font-color);
+        color: $_glb_main-font-color;
         text-decoration: none;
 
-        span{ color: var(--main-hover-color); }
+        span{ color: $_glb_main-hover-color; }
     }
 
     .top{
@@ -195,10 +258,10 @@ header{
         @extend %flex-center;
         a{
             height: 100%;
-            color: var(--secondary-font-color);
-            fill: var(--secondary-font-color);
-            transition-duration: var(--transition-duration-time);
-            transition-timing-function: var(--cubic-hover);
+            color: $_glb_secondary-font-color;
+            fill: $_glb_secondary-font-color;
+            transition-duration: $_glb_transition-duration-time;
+            transition-timing-function: $_glb_cubic-hover;
         }
         .contact{
             @extend %flex-center;
@@ -214,41 +277,27 @@ header{
 
     /*menu hover effect ==================== */
     .active-page{
-        color: var(--main-hover-color);
+        color: $_glb_main-hover-color;
     }
 
     .hover-effect:hover,
     .hover-effect:focus{
-        color: var(--main-hover-color);
-        fill: var(--main-hover-color);
+        color: $_glb_main-hover-color;
+        fill: $_glb_main-hover-color;
     }
 
     /*menu underline ==================== */
-    @mixin underline ($opacity){
-        content: "";
-        width: 100%;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        height: 5px;
-        background-color: var(--main-hover-color);
-        border-radius: 3px;
-        opacity: $opacity;
-        transition-duration: var(--transition-duration-time);
-        transition-timing-function: var(--cubic-hover);
-    }
-    
     .active-page{
         position: relative;
         &::after{
-            @include underline(1);
+            @include menu-underline(1);
         }
     }
 
     .menu-hover-underline{
         position: relative;
         &::after{
-            @include underline(0);
+            @include menu-underline(0);
         }
 
         &:hover::after,
@@ -267,14 +316,16 @@ header{
     max-width: 1600px;
     text-align: center;
     background-image:
-                linear-gradient(to right, var(--hero-gradient-1),var(--hero-gradient-2)),
+                linear-gradient(to right,
+                    $_glb_hero-gradient-1,
+                    $_glb_hero-gradient-2),
                 url("../images/hero-image.jpg");
     background-position: center;
 
     h1{
         margin-top:0;
         margin-bottom: 30px;
-        color:var(--main-font-on-dark-fon-color);
+        color:$_glb_main-font-on-dark-fon-color;
         font-style: normal;
         font-weight: 900;
         font-size: 44px;
@@ -286,7 +337,7 @@ header{
 
     button{
         @extend %button-base;
-        box-shadow: var(--hero-button-shadow);
+        box-shadow: $_glb_button-shadow;
     }
 }
 
@@ -314,25 +365,14 @@ header{
             display: block;
             width: 270px;
             height: 120px;
-            background-color: var(--secondary-bg-color);
+            background-color: $_glb_secondary-bg-color;
             border-radius: 4px;
             margin-bottom: 30px;
             background-repeat: no-repeat;
             background-position: center;
         }
 
-        $images: (
-            1: "../images/benefits-svg/antenna.svg",
-            2: "../images/benefits-svg/clock.svg",
-            3: "../images/benefits-svg/diagram.svg",
-            4: "../images/benefits-svg/astronaut.svg"
-        );
-
-        @each $key, $val in $images{
-            li:nth-child(#{$key})
-            h3::before{ background-image: url("#{$val}"); }    
-        }
-
+        @include benefits-images($images-map-for-benefits);
     }
 
         .benefits-list p{
@@ -340,7 +380,7 @@ header{
             font-weight: 400;
             font-size: 14px;
             line-height: 1.7em;
-            color: var(--secondary-font-color);
+            color: $_glb_secondary-font-color;
         }
 
 
@@ -371,10 +411,10 @@ header{
         align-items: center;
         position: absolute;
         bottom: 0;
-        color: var(--main-font-on-dark-fon-color);
+        color: $_glb_main-font-on-dark-fon-color;
         width: 100%;
         height: 70px;
-        background-color: var(--what-we-do-card-header-bg-color);
+        background-color: $_glb_what-we-do-card-header-bg-color;
 
         h3{
             margin: 0;
@@ -387,7 +427,7 @@ header{
 }
 /*in section our-team ===================== index.html ================================================*/
 .secondary-bg-color{
-    background-color: var(--secondary-bg-color);
+    background-color: $_glb_secondary-bg-color;
 }
 
 .section-title{
@@ -410,11 +450,11 @@ header{
     &-member{
         margin-right: 30px;
         padding-bottom: 24px;
-        background-color:var(--member-card-bg-color);
+        background-color:$_glb_member-card-bg-color;
         width: 270px;
         text-align: center;
-        background: var(--member-card-bg-color);
-        box-shadow: var(--our-team-member-shadow);
+        background: $_glb_member-card-bg-color;
+        box-shadow: $_glb_our-team-member-shadow;
         border-radius: 0px 0px 4px 4px;
 
         img{ margin-bottom: 30px; }
@@ -431,33 +471,10 @@ header{
             font-weight: 400;
             font-size: 16px;
             text-align: center;
-            color: var(--secondary-font-color);
+            color: $_glb_secondary-font-color;
         }
     }
     &-member:last-child{ margin-right: 0; }
-}
-
-%social-links{
-    justify-content: center;
-    li:not(:last-child){
-        margin-right: 10px;
-    }
-    a{ display: block; }
-    
-    .link-icon{
-        border-radius: 50%;
-        width: 44px;
-        height: 44px;
-        fill: var(--swg-icons-main-color);
-        transition-duration: var(--transition-duration-time); 
-        transition-timing-function: var(--cubic-hover);
-    }
-    
-    & a:hover .link-icon,
-    & a:focus .link-icon{
-        fill:var(--main-font-on-dark-fon-color);
-        background-color: var(--main-hover-color);
-    }
 }
 
 .social{
@@ -480,14 +497,15 @@ header{
     li{
         width: 170px;
         height: 90px;
-        border: 1px solid var(--swg-icons-main-color);
+        border: 1px solid $_glb_swg-icons-main-color;
         border-radius: 4px;
         
         &:hover,
-        &:focus{
-            border: 1px solid var(--main-hover-color);
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
+        &:focus-within{
+            outline: none;
+            border: 1px solid $_glb_main-hover-color;
+            transition-duration: $_glb_transition-duration-time; 
+            transition-timing-function: $_glb_cubic-hover;
         }
     }
 }
@@ -497,16 +515,16 @@ header{
         align-items: center;
         width: 100%;
         height: 100%;
-        
+        outline: none;
         svg{
-            fill: var(--swg-icons-main-color);
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
+            fill: $_glb_swg-icons-main-color;
+            transition-duration: $_glb_transition-duration-time; 
+            transition-timing-function: $_glb_cubic-hover;
         }
 
         &:hover svg,
         &:focus svg{
-            fill: var(--main-hover-color);
+            fill: $_glb_main-hover-color;
         }
     }
 /*in section portfolio ===================== portfolio.html ================================================*/
@@ -524,20 +542,20 @@ header{
             padding: 6px 22px;
             font-size: 16px;
             line-height: 1.6em;
-            background-color: var(--secondary-bg-color);
+            background-color: $_glb_secondary-bg-color;
             font-weight: 700;
             letter-spacing: 0.05em;
             border: none;
-            box-shadow: var(--portfolio-button-shadow);
+            box-shadow: $_glb_portfolio-button-shadow;
             border-radius: 4px;
             outline: none;
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
+            transition-duration: $_glb_transition-duration-time; 
+            transition-timing-function: $_glb_cubic-hover;
 
             &:hover,
             &:focus{
-                background-color: var(--main-hover-color);
-                color: var(--secondary-bg-color);
+                background-color: $_glb_main-hover-color;
+                color: $_glb_secondary-bg-color;
             }
         }
     }
@@ -549,15 +567,15 @@ header{
 
         .portfolio-item{
             width: 370px;
-            border: 1px solid var(--portfolio-card-border-color);
+            border: 1px solid $_glb_portfolio-card-border-color;
             margin-right: 30px;
             margin-bottom: 30px;
             overflow: hidden;
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
+            transition-duration: $_glb_transition-duration-time; 
+            transition-timing-function: $_glb_cubic-hover;
             
             &:hover,
-            &:focus-within{ box-shadow: var(--portfolio-card-shadow); }
+            &:focus-within{ box-shadow: $_glb_portfolio-card-shadow; }
             
             &:nth-child(3n){ margin-right: 0; }
     
@@ -583,15 +601,15 @@ header{
                 width: 100%;
                 height: 100%;
                 padding: 63px 24px;
-                background: var(--portfolio-card-hover-bg);
-                color: var(--main-font-on-dark-fon-color);
+                background: $_glb_portfolio-card-hover-bg;
+                color: $_glb_main-font-on-dark-fon-color;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 1.556em;
                 top: 100%;
                 transition-property: top;
-                transition-duration: var(--transition-duration-time); 
-                transition-timing-function: var(--cubic-hover);
+                transition-duration: $_glb_transition-duration-time; 
+                transition-timing-function: $_glb_cubic-hover;
             }
         }
     
@@ -603,7 +621,7 @@ header{
 
             .item-header{
                 margin-bottom: 9px;
-                color: var(--main-font-color);
+                color: $_glb_main-font-color;
                 font-style: normal;
                 font-weight: 700;
                 font-size: 16px;
@@ -612,7 +630,7 @@ header{
             }
             
             .item-filter{
-                color: var(--secondary-font-color);
+                color: $_glb_secondary-font-color;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 14px;
@@ -621,8 +639,8 @@ header{
 
 /*Footer ===================================================================== */
 footer{
-    color: var(--main-font-on-dark-fon-color);
-    background-color: var(--footer-bg-color);
+    color: $_glb_main-font-on-dark-fon-color;
+    background-color: $_glb_footer-bg-color;
     padding-top: 60px;
     padding-bottom: 60px;
     vertical-align: top;
@@ -645,7 +663,7 @@ footer{
         width: 231px;
         .logo{
             display: flex;
-            color: var(--main-font-on-dark-fon-color);
+            color: $_glb_main-font-on-dark-fon-color;
             margin-right: 0;
             margin-bottom: 20px;
         }
@@ -660,7 +678,7 @@ footer{
             a{
                 font-style: normal;
                 font-weight: 400;
-                color: var(--address-footer-a-color);
+                color: $_glb_address-footer-a-color;
             }
         }
     } 
@@ -670,8 +688,8 @@ footer{
         margin-right: 94px;
 
         .social .link-icon{
-            fill: var(--main-font-on-dark-fon-color);
-            background-color:var(--social-links);
+            fill: $_glb_main-font-on-dark-fon-color;
+            background-color:$_glb_social-links;
         }
     }
 
@@ -688,10 +706,10 @@ footer{
         border-radius: 4px;
         width: 358px;
         padding-left: 15px;
-        color: var(--main-font-on-dark-fon-color);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        background-color: var(--footer-bg-color);
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        color: $_glb_main-font-on-dark-fon-color;
+        border: 1px solid $_glb_footer-subscribe-input-border-color;
+        background-color: $_glb_footer-bg-color;
+        filter: $_glb_footer-subscribe-filter;
     }
 
     .footer-subscribe-label{
@@ -699,9 +717,9 @@ footer{
         left: 16px;
         top: 50%;
         transform: translateY(-50%);
-        transition-duration: var(--transition-duration-time);
-        transition-timing-function: var(--cubic-hover);
-        color: var(--secondary-font-color);
+        transition-duration: $_glb_transition-duration-time;
+        transition-timing-function: $_glb_cubic-hover;
+        color: $_glb_secondary-font-color;
     }
 
     .footer-subscribe-input:focus + .footer-subscribe-label,
@@ -713,7 +731,7 @@ footer{
         @extend %flex-center;
         @extend %button-base;
         margin-left: 12px;
-        fill: #ffffff;
+        fill: $_glb_main-font-on-dark-fon-color;
         svg{
             margin-left: 10px;
         }
@@ -727,8 +745,8 @@ footer{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--backdrop-bg-color);
-    transition-duration: var(--transition-duration-time);
+    background-color: $_glb_backdrop-bg-color;
+    transition-duration: $_glb_transition-duration-time;
     &.is-hidden{
         visibility: hidden;
         opacity: 0;
@@ -746,10 +764,10 @@ footer{
         padding: 40px;
         top: 50%;
         transform: translateY(-50%);
-        background-color: var(--modal-window-bg-color);
-        box-shadow: var(--modal-window-shadow);
+        background-color: $_glb_modal-window-bg-color;
+        box-shadow: $_glb_modal-window-shadow;
         border-radius: 4px;
-        transition-duration: var(--transition-duration-time);
+        transition-duration: $_glb_transition-duration-time;
         font-size: 14px;
     }
 
@@ -757,7 +775,7 @@ footer{
         @extend %flex-center;
         
         label{
-            color: var(--secondary-font-color);
+            color: $_glb_secondary-font-color;
             cursor: pointer;
         }
 
@@ -777,15 +795,15 @@ footer{
             right: 8px;
             width: 30px;
             height: 30px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid $_glb_close-modal-border-color;
             border-radius: 50%;
-            background-color: var(--modal-window-bg-color);
+            background-color: $_glb_modal-window-bg-color;
             cursor: pointer;
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
+            transition-duration: $_glb_transition-duration-time; 
+            transition-timing-function: $_glb_cubic-hover;
             
             &:hover,
-            &:focus{ fill: var(--main-hover-color); }
+            &:focus{ fill: $_glb_main-hover-color; }
         }
 
 
@@ -804,29 +822,15 @@ footer{
         }
     
         .modal-input{
-            width: 448px;
+            @extend %modal-input-textarea;
             height: 40px;
             padding-left: 42px;
-            border-radius: 4px;
-            cursor: pointer;
-            border: 1px solid rgba(33, 33, 33, 0.2);
-            &:focus{
-                outline: none;
-                border: 1px solid var(--main-hover-color);
-            }
         }
 
         .text{
-            width: 448px;
+            @extend %modal-input-textarea;
             height: 120px;
             padding: 12px 16px;
-            border: 1px solid rgba(33, 33, 33, 0.2);
-            border-radius: 4px;
-            cursor: pointer;
-            &:focus{
-                outline: none;
-                border: 1px solid var(--main-hover-color);
-            }
         }
 
         .svg-for-input{
@@ -840,7 +844,7 @@ footer{
             height: 18px;
 
             .modal-input:focus ~ &{
-                fill: var(--main-hover-color);
+                fill: $_glb_main-hover-color;
             }
         }
 
@@ -848,13 +852,13 @@ footer{
             position: absolute;
             top: 13px;
             left: 42px;
-            transition-duration: var(--transition-duration-time);
+            transition-duration: $_glb_transition-duration-time;
 
             .modal-input:focus + &,
             .modal-input:not(:placeholder-shown) + &{
                 top:-18px;
                 left:16px;
-                color: var(--main-hover-color);
+                color: $_glb_main-hover-color;
             }
         }
         
@@ -882,13 +886,13 @@ footer{
             border-radius: 2px;
 
             &:hover, input:focus + &{
-                background-color: var(--main-hover-color);
+                background-color: $_glb_main-hover-color;
                 border: none;
                 border-radius: 2px;
             }
 
             .input-checkbox-agreement:checked + &{
-                background-color: var(--main-hover-color);
+                background-color: $_glb_main-hover-color;
                 border: none;
                 background-image: url(../images/modal-svg/check.svg);
                 border-radius: 2px;
@@ -898,8 +902,9 @@ footer{
 
     .link-terms{
             position: relative;
-            color: var(--main-hover-color);
+            color: $_glb_main-hover-color;
         &::after{
+            /* -=-=-=- link underline -=-=-=- */
             content: "";
             position: absolute;
             width: 100%;
@@ -907,9 +912,9 @@ footer{
             left: 0;
             display: block;
             height: 0.05em;
-            background-color: var(--main-hover-color);
-            transition-duration: var(--transition-duration-time); 
-            transition-timing-function: var(--cubic-hover);
+            background-color: $_glb_main-hover-color;
+            transition-duration: $_glb_transition-duration-time; 
+            transition-timing-function: $_glb_cubic-hover;
         }
         &:hover::after{
             opacity: 0;
@@ -918,6 +923,4 @@ footer{
 
     .modal-button-send{
         @extend %button-base;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        cursor: pointer;
     }
